@@ -14,3 +14,5 @@
 ```
 npx expo start
 ```
+
+#### image: Fox Logo generated from midjourney
