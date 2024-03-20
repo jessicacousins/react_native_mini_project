@@ -3,6 +3,7 @@ import { View, Text, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import FeedScreen from "./components/Feed";
 
 function LogoTitle() {
   return (
@@ -24,13 +25,13 @@ function LoginScreen() {
   );
 }
 
-function FeedScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Feed</Text>
-    </View>
-  );
-}
+// function FeedScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+//       <Text>Feed</Text>
+//     </View>
+//   );
+// }
 
 function SettingsScreen() {
   return (
