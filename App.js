@@ -4,6 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import FeedScreen from "./components/Feed";
+import LoginScreen from "./components/Login";
+import SettingsScreen from "./components/Settings";
 
 function LogoTitle() {
   return (
@@ -13,30 +15,6 @@ function LogoTitle() {
         style={{ width: 30, height: 30, marginRight: 10 }}
       />
       <Text style={{ fontSize: 20, color: "#fff" }}>Fox App</Text>
-    </View>
-  );
-}
-
-function LoginScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Login</Text>
-    </View>
-  );
-}
-
-// function FeedScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-//       <Text>Feed</Text>
-//     </View>
-//   );
-// }
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings</Text>
     </View>
   );
 }
