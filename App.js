@@ -6,6 +6,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import FeedScreen from "./components/Feed";
 import LoginScreen from "./components/Login";
 import SettingsScreen from "./components/Settings";
+import { AuthProvider } from "./AuthContext";
 
 function LogoTitle() {
   return (
@@ -70,8 +71,10 @@ function MyTabs() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <MyTabs />
+      </NavigationContainer>
+    </AuthProvider>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Switch, TouchableOpacity } from "react-native";
+import { useAuth } from "../AuthContext";
 
 const SettingsOption = ({ title, onPress }) => (
   <TouchableOpacity style={styles.option} onPress={onPress}>
@@ -8,6 +9,7 @@ const SettingsOption = ({ title, onPress }) => (
 );
 
 const SettingsScreen = () => {
+  const { logout } = useAuth();
   const [isNotificationsEnabled, setIsNotificationsEnabled] = useState(false);
 
   const toggleNotificationsSwitch = () =>
@@ -18,7 +20,9 @@ const SettingsScreen = () => {
   const handleAccountInformation = () => console.log("Account Information");
   const handleLoginAndSecurity = () => console.log("Login & Security");
   const handleDevices = () => console.log("Devices");
-  const handleLogout = () => console.log("Logout");
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <View style={styles.container}>

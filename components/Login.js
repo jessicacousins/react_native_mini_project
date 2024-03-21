@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useAuth } from "../AuthContext";
+import { useNavigation } from "@react-navigation/native";
 import {
   StyleSheet,
   Text,
@@ -13,10 +15,11 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-
-    
+  const { login } = useAuth();
+  const navigation = useNavigation();
 
   const handleLogin = () => {
+    login(email);
     console.log("Email:", email);
     console.log("Password:", password);
   };
