@@ -7,6 +7,7 @@ import FeedScreen from "./components/Feed";
 import LoginScreen from "./components/Login";
 import SettingsScreen from "./components/Settings";
 import { AuthProvider } from "./AuthContext";
+import { StatusBar } from "expo-status-bar";
 
 function LogoTitle() {
   return (
@@ -72,6 +73,7 @@ function MyTabs() {
 export default function App() {
   return (
     <AuthProvider>
+      <StatusBar style="light" />
       <NavigationContainer>
         <MyTabs />
       </NavigationContainer>

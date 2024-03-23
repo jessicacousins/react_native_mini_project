@@ -3,6 +3,7 @@
 ## Backend Info:
 
 - `npm install express mongoose cors dotenv`
+- `npm install bcrypt`
 
 ### start backend:
 
@@ -21,6 +22,9 @@ node server.js
 - `npm install @react-navigation/native-stack`
 - `npm install @react-navigation/bottom-tabs`
 - `npm install react-native-vector-icons`
+- `npm install react-native-dotenv`
+- `npm install dotenv --save`
+- `npm install expo-constants`
 
 #### start frontend:
 

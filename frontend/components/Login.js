@@ -10,6 +10,7 @@ import {
   Image,
   StatusBar,
 } from "react-native";
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,8 +19,8 @@ const Login = () => {
   const { login } = useAuth();
   const navigation = useNavigation();
 
-  const handleLogin = () => {
-    login(email);
+  const handleLogin = async () => {
+    await login(email, password);
     console.log("Email:", email);
     console.log("Password:", password);
   };

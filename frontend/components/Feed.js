@@ -37,15 +37,18 @@ const Feed = () => {
   const [content, setContent] = useState("");
 
   const addPost = () => {
-    if (user) {
+    console.log(user);
+    if (user && user.email) {
       const newPost = {
         title,
         content,
-        author: user.name,
+        author: user.email,
         likes: 0,
         dislikes: 0,
       };
       setPosts([...posts, newPost]);
+    } else {
+      console.error("User is not logged in or email is not set");
     }
     setTitle("");
     setContent("");
